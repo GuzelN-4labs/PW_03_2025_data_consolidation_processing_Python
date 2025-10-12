@@ -5,9 +5,9 @@ version: '3.8'
 services:
   postgres:
     image: postgres:15
-    container_name: airline_postgres
+    container_name: var16_project_completion_postgres
     environment:
-      POSTGRES_DB: airline_analytics
+      POSTGRES_DB: var16_project_completion_analytics
       POSTGRES_USER: analyst
       POSTGRES_PASSWORD: analyst123
     ports:
@@ -16,11 +16,11 @@ services:
       - postgres_data:/var/lib/postgresql/data
       - ./sql:/docker-entrypoint-initdb.d
     networks:
-      - airline_network
+      - var16_project_completion_network
 
   jupyter:
     build: .
-    container_name: airline_jupyter
+    container_name: var16_project_completion_jupyter
     ports:
       - "8888:8888"
     volumes:
@@ -29,13 +29,13 @@ services:
     environment:
       JUPYTER_ENABLE_LAB: "yes"
       POSTGRES_HOST: postgres
-      POSTGRES_DB: airline_analytics
+      POSTGRES_DB: var16_project_completione_analytics
       POSTGRES_USER: analyst
       POSTGRES_PASSWORD: analyst123
     depends_on:
       - postgres
     networks:
-      - airline_network
+      - var16_project_completion_network
     command: start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''
 
 volumes:
@@ -44,3 +44,4 @@ volumes:
 networks:
   airline_network:
     driver: bridge
+
