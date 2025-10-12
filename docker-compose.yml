@@ -29,7 +29,7 @@ services:
     environment:
       JUPYTER_ENABLE_LAB: "yes"
       POSTGRES_HOST: postgres
-      POSTGRES_DB: var16_project_completione_analytics
+      POSTGRES_DB: var16_project_completion_analytics
       POSTGRES_USER: analyst
       POSTGRES_PASSWORD: analyst123
     depends_on:
@@ -44,4 +44,5 @@ volumes:
 networks:
   airline_network:
     driver: bridge
+
 
