@@ -4,7 +4,7 @@ task variant 16
 """
 
 """
-Генератор тестовых данных для задания 30: Анализ авиакомпаний
+Генератор тестовых данных для задания 16: Анализ выполнения проектов
 Создает три файла:
 1. partners.csv - данные об партнерах
 2. projects.xlsx - данные о проектах
@@ -43,7 +43,7 @@ def generate_partners_data():
     return partners_data
 
 def generate_projects_data(partners_data):
-    """Генерация данных о рейсах (Excel)"""
+    """Генерация данных о проектах (Excel)"""
 
     project_types = ["mvp", "optimization", "production", "scaling"]
 
