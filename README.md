@@ -1,32 +1,32 @@
 # PW_03_2025_data_consolidation_processing_Python
 **Студент:** *Нургалеева Гузель*
 
-# Рассчет освоенного бюджета для каждого партнера - Задание 16
+## Рассчет освоенного бюджета для каждого партнера - Задание 16
 
 Практическая работа по консолидации и аналитической обработке данных по освоению бюджета партнерскими компаниями с использованием Docker Compose, Jupyter Notebook и PostgreSQL на Ubuntu 20+.
 
-## Цель работы
+### Цель работы
 
 рассчитать освоенный бюджет для каждого партнера на основе консолидации данных из трех источников:
 - **partners (CSV):** Партнеры (partner_id, name)
 - **projects (Excel):** Проекты (partner_id, project_id, budget)
 - **projects_completion_percent (JSON):** Выполнение: (project_id, completion_percent)
 
-## Архитектура
+### Архитектура
 
 - **Docker Compose v2** для оркестрации контейнеров
 - **Jupyter Lab** для анализа данных и визуализации
 - **PostgreSQL 15** для хранения и обработки данных
 - **Python** с библиотеками: pandas, numpy, matplotlib, seaborn, plotly
 
-## Требования
+### Требования
 
 - Ubuntu 20+ 
 - Docker и Docker Compose v2 (см. [dockerhelp.md](dockerhelp.md) для установки)
 - Python 3.8+
 - Свободные порты: 8888 (Jupyter), 5432 (PostgreSQL)
 
-## Структура проекта
+### Структура проекта
 
 ```
 programmETL/
